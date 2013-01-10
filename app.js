@@ -12,8 +12,10 @@ Ext.application({
         'Ext.MessageBox',
 		'Ext.device.Geolocation',
 		'Ext.carousel.Carousel',
-		'Ext.form.Panel'
+		'Ext.form.Panel',
+		'Ext.data.proxy.JsonP'
     ],
+	
 	controllers:['Weather'],
     
 
