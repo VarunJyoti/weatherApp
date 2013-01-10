@@ -5,9 +5,15 @@ Ext.define("weather.view.AddLocation", {
     config:{
         items: [
             {
-                xtype: 'textfield',
-                name: 'city',
-                label: 'City'
+                xtype: "fieldset",
+                title: "Add location",
+                items:[
+                    {
+                        xtype: 'searchfield',
+                        name: 'city',
+                        label: 'City'
+                    }
+                ]
             }
         ]
     }
