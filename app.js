@@ -9,7 +9,8 @@ Ext.application({
     name: 'weather',
 
     requires: [
-        'Ext.MessageBox'
+        'Ext.MessageBox',
+		'Ext.device.Geolocation'
     ],
 	controllers:['Weather'],
     

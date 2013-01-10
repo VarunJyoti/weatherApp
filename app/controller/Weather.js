@@ -15,24 +15,15 @@ Ext.define('weather.controller.Weather', {
 	},
 	
 	launch:function(){
-		var geo = Ext.create('Ext.util.Geolocation', {
-		    autoUpdate: false,
-		    listeners: {
-		        locationupdate: function(geo) {
-		            alert('New latitude: ' + geo.getLatitude());
-					alert('New longitude: ' + geo.getLongitude());
-		        },
-		        locationerror: function(geo, bTimeout, bPermissionDenied, bLocationUnavailable, message) {
-		            if(bTimeout){
-		                alert('Timeout occurred.');
-		            } else {
-		                alert('Error occurred.');
-		            }
-		        }
-		    }
-		});
-		geo.updateLocation();
 		
+		Ext.device.Geolocation.getCurrentPosition({
+    		success: function(position) {
+        		console.log(position.coords);
+    		},
+    		failure: function() {
+        		alert('something went wrong!');
+    		}
+		});
 	}
 	
 });
