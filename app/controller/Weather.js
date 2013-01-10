@@ -1,7 +1,7 @@
 Ext.define('weather.controller.Weather', {
     extend: 'Ext.app.Controller',
-	views: ['Main'],
 	config:{
+        views: ['Main', 'Home'],
 		control:{
 			
 		},
@@ -18,10 +18,10 @@ Ext.define('weather.controller.Weather', {
 		
 		Ext.device.Geolocation.getCurrentPosition({
     		success: function(position) {
-        		console.log(position.coords);
+        		console.log(position);
     		},
     		failure: function() {
-        		alert('something went wrong!');
+        		alert('Cannot determine location');
     		}
 		});
 	}
