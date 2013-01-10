@@ -16,12 +16,6 @@ Ext.define('weather.view.Main', {
                 styleHtmlContent: true,
                 scrollable: true,
 
-                items: {
-                    docked: 'top',
-                    xtype: 'titlebar',
-                    title: 'How is the weather outside?'
-                },
-
                 html: [
                     "You've just generated a new Sencha Touch 2 project. What you're looking at right now is the ",
                     "contents of <a target='_blank' href=\"app/view/Main.js\">app/view/Main.js</a> - edit that file ",
@@ -33,11 +27,6 @@ Ext.define('weather.view.Main', {
                 iconCls: 'action',
 
                 items: [
-                    {
-                        docked: 'top',
-                        xtype: 'titlebar',
-                        title: 'Getting Started'
-                    },
                     {
                         xtype: 'video',
                         url: 'http://av.vimeo.com/64284/137/87347327.mp4?token=1330978144_f9b698fea38cd408d52a2393240c896c',
