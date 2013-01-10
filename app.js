@@ -41,7 +41,7 @@ Ext.application({
         // Destroy the #appLoadingIndicator element
         Ext.fly('appLoadingIndicator').destroy();
 
-        V2.util.init();
+        V2.util._init();
 
         // Initialize the main view
         Ext.Viewport.add(Ext.create('weather.view.Main'));
@@ -92,6 +92,6 @@ V2.util = (function(){
     return {
         "getUserAddedLocations": getUserAddedLocations,
         "addUserLocation": addUserLocation,
-        "init": init
+        "_init": init
     }
 })();
