@@ -1,7 +1,7 @@
 Ext.define('weather.controller.Weather', {
     extend: 'Ext.app.Controller',
 	config:{
-        views: ['Main', 'Home'],
+        views: ['Main', 'Home', 'AddLocation'],
 		control:{
 			
 		},

@@ -11,7 +11,8 @@ Ext.application({
     requires: [
         'Ext.MessageBox',
 		'Ext.device.Geolocation',
-		'Ext.carousel.Carousel'
+		'Ext.carousel.Carousel',
+		'Ext.form.Panel'
     ],
 	controllers:['Weather'],
     

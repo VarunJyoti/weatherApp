@@ -3,7 +3,6 @@ Ext.define('weather.view.Main', {
     xtype: 'main',
     requires: [
         'Ext.TitleBar',
-        'Ext.Video'
     ],
     config: {
         tabBarPosition: 'bottom',
@@ -16,12 +15,9 @@ Ext.define('weather.view.Main', {
                 title: 'Home'
             },
             {
-                title: 'Get Started',
-                iconCls: 'action',
-
-                html: [
-                    "Another place holder view for the time being"
-                ].join("")
+                title: 'Settings',
+                iconCls: 'settings',
+                xtype: "AddLocation"
             }
         ]
     }
