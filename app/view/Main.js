@@ -19,7 +19,7 @@ Ext.define('weather.view.Main', {
                 items: {
                     docked: 'top',
                     xtype: 'titlebar',
-                    title: 'Welcome to Sencha Touch 2'
+                    title: 'How is the weather outside?'
                 },
 
                 html: [
