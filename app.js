@@ -11,8 +11,8 @@ Ext.application({
     requires: [
         'Ext.MessageBox'
     ],
-
-    views: ['Main'],
+	controllers:['Weather'],
+    
 
     icon: {
         '57': 'resources/icons/Icon.png',
