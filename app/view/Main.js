@@ -17,7 +17,7 @@ Ext.define('weather.view.Main', {
             {
                 title: 'Settings',
                 iconCls: 'settings',
-                xtype: "AddLocation"
+                xtype: "ManageLocations"
             }
         ]
     }

@@ -3,13 +3,13 @@ Ext.define('weather.controller.Weather', {
 	config:{
 		stores:['Conditions', 'Locations'],
 		models:['Condition', 'Location'],
-        views: ['Main', 'Home', 'AddLocation'],
+        views: ['Main', 'Home', 'AddLocation', 'ManageLocations'],
 		control:{
 			
 		},
 		refs:{
-			
-		},
+				manageLocView: "#wv-managelocations"
+			}
 	},
 	
 	init:function(){
@@ -34,6 +34,16 @@ Ext.define('weather.controller.Weather', {
         		alert('Cannot determine location');
     		}
 		});
+
+		this.getManageLocView().on("painted", function(list, op){
+			console.log("list painted");
+			console.log(arguments);
+		})
+
+		this.getManageLocView().on("updatedata", function(list, op){
+			console.log("list data updated");
+			console.log(arguments);
+		})
 	}
 	
 });

@@ -13,6 +13,7 @@ Ext.application({
 		'Ext.device.Geolocation',
 		'Ext.carousel.Carousel',
 		'Ext.form.Panel',
+        'Ext.dataview.List',
 		'Ext.data.proxy.JsonP'
     ],
 	
