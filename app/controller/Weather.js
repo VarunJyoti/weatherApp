@@ -1,8 +1,8 @@
 Ext.define('weather.controller.Weather', {
     extend: 'Ext.app.Controller',
 	config:{
-		stores:['Conditions', 'Locations'],
-		models:['Condition', 'Location'],
+		stores:['Conditions','Cities', 'Locations'],
+		models:['Condition', 'City', 'Location'],
         views: ['Main', 'Home', 'AddLocation', 'ManageLocations'],
 		control:{
 			
@@ -23,11 +23,7 @@ Ext.define('weather.controller.Weather', {
 				var latitude = position.coords.latitude,
 				 	longitude =  position.coords.longitude;
         		Ext.data.StoreManager.lookup("Conditions").load({
-					url:'http://api.wunderground.com/api/4c9a49fbc5bc7ec9/conditions/q/'+latitude+','+longitude+'.json',
-					callback:function(rec){
-						
-						console.log(rec);
-					}
+					url:'http://api.wunderground.com/api/4c9a49fbc5bc7ec9/conditions/q/'+latitude+','+longitude+'.json'
 				});
     		},
     		failure: function() {

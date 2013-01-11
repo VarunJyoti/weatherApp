@@ -14,7 +14,9 @@ Ext.application({
 		'Ext.carousel.Carousel',
 		'Ext.form.Panel',
         'Ext.dataview.List',
-		'Ext.data.proxy.JsonP'
+		'Ext.data.proxy.JsonP',
+		'Ext.form.FieldSet',
+		'Ext.field.Search',
     ],
 	
 	controllers:['Weather'],
