@@ -44,6 +44,8 @@ Ext.application({
         // Destroy the #appLoadingIndicator element
         Ext.fly('appLoadingIndicator').destroy();
 
+        V2.util._init();
+
         // Initialize the main view
         Ext.Viewport.add(Ext.create('weather.view.Main'));
     },
@@ -60,3 +62,39 @@ Ext.application({
         );
     }
 });
+
+Ext.namespace("V2.util");
+V2.util = (function(){
+    var storeMgr, locationStore;
+
+    var getUserAddedLocations = function(){
+        locationStore.load();
+    }
+
+    var addUserLocation = function(locObj){
+        var locationObj = {};
+
+        if(locObj.$className && locObj.$className === "weather.model.Location"){
+            locationObj = locObj
+        } else {
+            var locationObj = Ext.create("weather.model.Location", locObj);
+        }
+
+        if(locationObj.isValid()){
+            locationStore.add(locationObj);
+        }else{
+            console.log("Invalid locations object");
+        }
+    }
+
+    var init = function(){
+        storeMgr = Ext.data.StoreManager;
+        locationStore = storeMgr.lookup("Locations");
+    }
+
+    return {
+        "getUserAddedLocations": getUserAddedLocations,
+        "addUserLocation": addUserLocation,
+        "_init": init
+    }
+})();

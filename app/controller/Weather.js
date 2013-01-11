@@ -1,8 +1,8 @@
 Ext.define('weather.controller.Weather', {
     extend: 'Ext.app.Controller',
 	config:{
-		stores:['Conditions','Cities'],
-		models:['Condition', 'City'],
+		stores:['Conditions','Cities', 'Locations'],
+		models:['Condition', 'City', 'Location'],
         views: ['Main', 'Home', 'AddLocation'],
 		control:{
 			
