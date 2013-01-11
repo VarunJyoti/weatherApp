@@ -13,7 +13,10 @@ Ext.application({
 		'Ext.device.Geolocation',
 		'Ext.carousel.Carousel',
 		'Ext.form.Panel',
-		'Ext.data.proxy.JsonP'
+		'Ext.data.proxy.JsonP',
+		'Ext.form.FieldSet',
+		'Ext.field.Search',
+		'Ext.dataview.List'
     ],
 	
 	controllers:['Weather'],
